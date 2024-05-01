@@ -51,7 +51,7 @@ che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è
 altrimenti “Accesso negato”
 -->
 
-<?php
+<!-- <?php
 
 $name = $_GET['name'];
 $age = $_GET['age'];
@@ -62,9 +62,6 @@ if(strlen($name) > 3 && strpos($mail, "@") && strpos($mail, ".") && is_numeric($
 }else{
     echo "Accesso negato";
 }
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -83,5 +80,55 @@ if(strlen($name) > 3 && strpos($mail, "@") && strpos($mail, ".") && is_numeric($
         <button type="submit">invia</button>
         <button type="reset">reset</button>
     </form>
+</body>
+</html> -->
+
+
+
+<!-- 
+    Snack 3
+Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato:
+DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data. 
+Stampare ogni data con i relativi post. 
+-->
+
+<?php
+// Array di libri associati a ciascuna data
+$libri_per_data = [
+    "01-01-2007" => [
+        ["titolo" => "Harry Potter e la Pietra Filosofale", "autore" => "J.K. Rowling"],
+        ["titolo" => "Il Codice Da Vinci", "autore" => "Dan Brown"]
+    ],
+    "05-03-2008" => [
+        ["titolo" => "La ragazza di Fuoco", "autore" => "Suzanne Collins"],
+        ["titolo" => "La solitudine dei numeri primi", "autore" => "Paolo Giordano"]
+    ],
+    "12-07-2009" => [
+        ["titolo" => "La regina dei castelli di carta", "autore" => "Stieg Larsson"],
+        ["titolo" => "La ragazza del treno", "autore" => "Paula Hawkins"],
+        ["titolo" => "Il signore degli anelli", "autore" => "J.R.R. Tolkien"]
+    ]
+];
+
+// Stampare ogni data con i relativi libri
+foreach ($libri_per_data as $data => $libri) {
+    echo "Data: $data<br>";
+    echo "Libri:<br>";
+    foreach ($libri as $libro) {
+        echo "- Titolo: {$libro['titolo']}, Autore: {$libro['autore']}<br>";
+    }
+    echo "<br>";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
 </body>
 </html>
