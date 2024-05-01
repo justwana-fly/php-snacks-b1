@@ -173,7 +173,7 @@ print_r($numbers);
 Prendere un paragrafo abbastanza lungo, contenente diverse frasi. 
 Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. 
 -->
-<?php
+<!-- <?php
 $paragrafo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. 
 Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
@@ -200,5 +200,85 @@ foreach ($paragrafi as $paragrafo) {
 </head>
 <body>
     
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+    Snack 6
+Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro array mettendo gli insegnanti
+ in un rettangolo grigio e i PM in un rettangolo verde 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher and PM List</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .teachers {
+            background-color: lightgrey;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        .pm {
+            background-color: lightgreen;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <?php
+    $db = [
+        'teachers' => [
+            [
+                'name' => 'Michele',
+                'lastname' => 'Papagni'
+            ],
+            [
+                'name' => 'Fabio',
+                'lastname' => 'Forghieri'
+            ]
+        ],
+        'pm' => [
+            [
+                'name' => 'Roberto',
+                'lastname' => 'Marazzini'
+            ],
+            [
+                'name' => 'Federico',
+                'lastname' => 'Pellegrini'
+            ]
+        ]
+    ];
+    ?>
+
+    <div class="container">
+        <div class="teachers">
+            <h2>Insegnanti</h2>
+            <ul>
+                <?php foreach ($db['teachers'] as $teacher): ?>
+                    <li><?= $teacher['name'] ?> <?= $teacher['lastname'] ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+
+        <div class="pm">
+            <h2>Project Manager</h2>
+            <ul>
+                <?php foreach ($db['pm'] as $pm): ?>
+                    <li><?= $pm['name'] ?> <?= $pm['lastname'] ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
