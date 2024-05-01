@@ -141,7 +141,7 @@ foreach ($libri_per_data as $data => $libri) {
     Snack 4
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta 
 -->
-<?php
+<!-- <?php
 
 $numbers = [];
 
@@ -152,6 +152,45 @@ for ($i = 0; $i < 15; $i++) {
 }
 print_r($numbers);
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+    Snack 5
+Prendere un paragrafo abbastanza lungo, contenente diverse frasi. 
+Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. 
+-->
+<?php
+$paragrafo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. 
+Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales
+ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque
+sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. 
+Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.
+Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum 
+velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.";
+
+$paragrafi = explode(".", $paragrafo);
+
+foreach ($paragrafi as $paragrafo) {
+    echo "<p>$paragrafo.</p>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
