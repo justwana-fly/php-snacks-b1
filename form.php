@@ -212,7 +212,7 @@ foreach ($paragrafi as $paragrafo) {
 Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro array mettendo gli insegnanti
  in un rettangolo grigio e i PM in un rettangolo verde 
 -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -280,5 +280,49 @@ Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro arra
             </ul>
         </div>
     </div>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- 
+    Snack 7
+Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome,
+ Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno. 
+-->
+<?php
+$classe = [
+    [
+        'nome' => 'Mario',
+        'cognome' => 'Rossi',
+        'voti' => [3, 5, 0, 6, 2]
+    ],
+    [
+        'nome' => 'Luca',
+        'cognome' => 'Bianchi',
+        'voti' => [7, 8, 7, 6, 8]
+    ],
+    [
+        'nome' => 'Anna',
+        'cognome' => 'Verdi',
+        'voti' => [9, 9, 8, 9, 7]
+    ]
+];
+foreach ($classe as $alunno) {
+    echo "Nome: " . $alunno['nome'] . " Cognome: " . $alunno['cognome'] . " Media voti: " . array_sum($alunno['voti']) / count($alunno['voti']) . "<br>";
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
 </body>
 </html>
