@@ -7,7 +7,7 @@ Stampiamo a schermo tutte le partite con questo schema:
 Olimpia Milano - Cantù | 55-60 
 -->
 
-<?php
+<!-- <?php
 $partite = [
     ["Squadra Casa" => "Team A", "Squadra Ospite" => "Team B", "PuntiCasa" => 85, "PuntiOspiti" => 78],
     ["Squadra Casa" => "Team C", "Squadra Ospite" => "Team D", "PuntiCasa" => 92, "PuntiOspiti" => 88],
@@ -37,5 +37,51 @@ foreach ($partite as $partita){
 <body>
     
 
+</body>
+</html> -->
+
+
+
+
+<!-- 
+    Snack 2
+Con un form passare come parametri GET name, mail e age e verificare 
+(cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri,
+che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”,
+altrimenti “Accesso negato”
+-->
+
+<?php
+
+$name = $_GET['name'];
+$age = $_GET['age'];
+$mail = $_GET['mail'];
+
+if(strlen($name) > 3 && strpos($mail, "@") && strpos($mail, ".") && is_numeric($age)){
+    echo "Accesso riuscito";
+}else{
+    echo "Accesso negato";
+}
+
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="form.php" method="GET">
+        <h1>Login</h1>
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="age" placeholder="age">
+        <input type="mail" name="mail" placeholder="mail">
+        <button type="submit">invia</button>
+        <button type="reset">reset</button>
+    </form>
 </body>
 </html>
